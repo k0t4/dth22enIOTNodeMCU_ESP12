@@ -4,9 +4,9 @@
 
 //#include <DHT.h>
 
-String apiKey = "QW4T1W0KPN2BVK94";
-const char* ssid = "vodafone7FE0";
-const char* password = "UY8LXQ7SP6HJ46";
+String apiKey = "QW4T1W0K";// calve del canal de thigspeak
+const char* ssid = "vodaf";// nombre de la wifi
+const char* password = "UY8";// clave de la wifi
 const char* server = "api.thingspeak.com";
 int pinDHT22 = D0;
 SimpleDHT22 dht22;
@@ -31,7 +31,7 @@ void setup() {
 void loop() {
   byte temperatura = 0;
   byte humedad = 0;
-  float luminosidad = analogRead(A0);
+  float luminosidad = analogRead(A0);// ldr si quieres, si no quitar
   if (dht22.read(pinDHT22, &temperatura, &humedad, NULL)) {
     Serial.print("Read DHT22 failed.");
     return;
